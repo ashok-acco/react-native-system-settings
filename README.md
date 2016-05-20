@@ -11,7 +11,9 @@ This module has been prepared by according to Android Configuration class;  http
 
 ## installation
 
-In your settings.gradle add the lines below:
+1. Run the command of `npm i --save react-native-system-settings` in the console.
+
+2. In your settings.gradle add the lines below:
 
 
 	include ':systemsettings'
@@ -19,7 +21,7 @@ In your settings.gradle add the lines below:
 
 
 
-The package needs to be provided in the getPackages method of the MainActivity.java file. This file exists under the android folder in your react-native application directory. The path to this file is: android/app/src/main/java/com/your-app-name/MainActivity.java.
+3. The package needs to be provided in the getPackages method of the MainActivity.java file. This file exists under the android folder in your react-native application directory. The path to this file is: android/app/src/main/java/com/your-app-name/MainActivity.java.
 
 
 	import com.systemsettings.SystemSettingsPackage;  // <-- Add this line
@@ -33,7 +35,7 @@ The package needs to be provided in the getPackages method of the MainActivity.j
 
 
 
-In your android/app/build.gradle add the following line:
+4. In your android/app/build.gradle add the following line:
 
 
 	dependencies {
@@ -47,10 +49,11 @@ In your android/app/build.gradle add the following line:
 
 ## usage
 
+Define a new module variable by;<br>
 `import SystemSettings from 'react-native-system-settings';`<br>
 or<br>
 `var SystemSettings = require('react-native-system-settings');`<br>
-then somewhere in code<br>
+then system settings can gotten in somewhere in code<br>
 ```
 SystemSettings.get(
 	settings => console.log('settings: ', settings)
@@ -84,26 +87,26 @@ Sample result from Galaxy S3 (Genymotion);
 
 ### The values that can be existed in result object;
 
-- densityDpi: number
-- fontScale: number
-- hardKeyboardHidden: enum('undefined', 'no', 'yes')
-- keyboardHidden: enum('undefined', 'no', 'yes')
-- keyboard: enum('undefined', 'nokeys', 'qwerty', '12key')
-- orientation: enum('undefined', 'portrait', 'landscape', 'square')
-- screenLayout: enum('small', 'normal', 'large', 'xlarge', 'undefined') <br>
+- densityDpi: Number
+- fontScale: Number
+- hardKeyboardHidden: One of 'undefined', 'no' or 'yes' strings
+- keyboardHidden: One of 'undefined', 'no' or 'yes' strings
+- keyboard: One of 'undefined', 'nokeys', 'qwerty' or '12key' strings
+- orientation: One of 'undefined', 'portrait', 'landscape' or 'square' strings
+- screenLayout: One of 'small', 'normal', 'large', 'xlarge' or 'undefined' strings <br>
 	*small:* The screen is at least approximately 320x426 dp units.<br>
 	*normal:* The screen is at least approximately 320x470 dp units.<br>
 	*large:* The screen is at least approximately 480x640 dp units.<br>
 	*xlarge:* The screen is at least approximately 720x960 dp units.<br>
 	*undefined:* A screen layout size value indicating that no size has been set.
-- screenHeightDp: number
-- screenWidthDp: number
-- smallestScreenWidthDp: number
-- uiModeType: enum('undefined', 'normal', 'desk', 'car', 'television', 'appliance', 'watch')
+- screenHeightDp: Number
+- screenWidthDp: Number
+- smallestScreenWidthDp: Number
+- uiModeType: One of 'undefined', 'normal', 'desk', 'car', 'television', 'appliance' or 'watch' strings
 - locale: object<br>
-	locale.country: enum('US', 'GB', 'DE', 'FR', ...)<br>
-	locale.displayCountry: enum('United States', 'United Kingdom', ...)<br>
-	locale.displayLanguage: enum('English', 'Deutsch', ...)<br>
-	locale.displayName: enum('English (United States)', 'Deutsch (Deutschland)', ...)<br>
-	locale.language: enum('en', 'de', 'fr', 'tr', ...)<br>
-	locale.localization: enum('en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ...)<br>
+	*locale.country:* One of 'US', 'GB', 'DE', 'FR', ... strings <br>
+	*locale.displayCountry:* One of 'United States', 'United Kingdom', ... strings <br>
+	*locale.displayLanguage:* One of 'English', 'Deutsch', ... strings <br>
+	*locale.displayName:*	 One of 'English (United States)', 'Deutsch (Deutschland)', ... strings <br>
+	*locale.language:*	 One of 'en', 'de', 'fr', 'tr', ...)<br>
+	*locale.localization:*	 One of 'en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ... strings <br>

@@ -108,5 +108,5 @@ Sample result from Galaxy S3 (Genymotion);
 	*locale.displayCountry:* One of 'United States', 'United Kingdom', ... strings <br>
 	*locale.displayLanguage:* One of 'English', 'Deutsch', ... strings <br>
 	*locale.displayName:*	 One of 'English (United States)', 'Deutsch (Deutschland)', ... strings <br>
-	*locale.language:*	 One of 'en', 'de', 'fr', 'tr', ... <br>
+	*locale.language:*	 One of 'en', 'de', 'fr', 'tr', ... strings <br>
 	*locale.localization:*	 One of 'en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ... strings <br>

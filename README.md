@@ -47,10 +47,15 @@ In your android/app/build.gradle add the following line:
 
 ## usage
 
-`import SystemSettings from 'react-native-system-settings';`
-or
-`var SystemSettings = require('react-native-system-settings');`
-
+`import SystemSettings from 'react-native-system-settings';`<br>
+or<br>
+`var SystemSettings = require('react-native-system-settings');`<br>
+then <br>
+```
+SystemSettings.get(
+	settings => console.log('settings: ', settings)
+)
+```
 
 Sample result from Galaxy S3 (Genymotion);
 

@@ -50,7 +50,7 @@ In your android/app/build.gradle add the following line:
 `import SystemSettings from 'react-native-system-settings';`<br>
 or<br>
 `var SystemSettings = require('react-native-system-settings');`<br>
-then <br>
+then somewhere in code<br>
 ```
 SystemSettings.get(
 	settings => console.log('settings: ', settings)

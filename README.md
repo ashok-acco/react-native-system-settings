@@ -29,7 +29,7 @@ This module has been prepared by according to Android Configuration class;  http
 	protected List<ReactPackage> getPackages() {
 	    return Arrays.<ReactPackage>asList(
 	            new MainReactPackage(),
-	            new SystemSettingsModule()  // <-- Also add this line
+	            new SystemSettingsPackage()  // <-- Also add this line
 			);
 	}
 	```

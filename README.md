@@ -15,15 +15,15 @@ This module has been prepared by according to Android Configuration class;  http
 
 2. In your settings.gradle add the lines below:
 
-
+	```
 	include ':systemsettings'
 	project(':systemsettings').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-system-settings/android')
-
+	```
 
 
 3. The package needs to be provided in the getPackages method of the MainActivity.java file. This file exists under the android folder in your react-native application directory. The path to this file is: android/app/src/main/java/com/your-app-name/MainActivity.java.
 
-
+	```
 	import com.systemsettings.SystemSettingsPackage;  // <-- Add this line
 
 	protected List<ReactPackage> getPackages() {
@@ -32,19 +32,19 @@ This module has been prepared by according to Android Configuration class;  http
 	            new SystemSettingsModule()  // <-- Also add this line
 			);
 	}
-
+	```
 
 
 4. In your android/app/build.gradle add the following line:
 
-
+	```
 	dependencies {
 	    compile fileTree(dir: "libs", include: ["*.jar"])
 	    compile "com.android.support:appcompat-v7:23.0.1"
 	    compile "com.facebook.react:react-native:+"
 			compile project(':systemsettings')  // <-- Add this line
 	}
-
+	```
 
 
 ## usage
@@ -62,6 +62,7 @@ SystemSettings.get(
 
 Sample result from Galaxy S3 (Genymotion);
 
+	```
 	{
 		densityDpi: 320,
 		fontScale: 1,
@@ -83,7 +84,7 @@ Sample result from Galaxy S3 (Genymotion);
 		smallestScreenWidthDp: 360,
 		uiModeType: "normal"
 	}
-
+	```
 
 ### The values that can be existed in result object;
 

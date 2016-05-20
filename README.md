@@ -15,7 +15,7 @@ In your settings.gradle add the lines below:
 
 
 	include ':systemsettings'
-	project(':systemsettings').projectDir = new File(rootProject.projectDir, '../native_modules/systemsettings/android')
+	project(':systemsettings').projectDir = new File(rootProject.projectDir, '../node_modules/systemsettings/android')
 
 
 

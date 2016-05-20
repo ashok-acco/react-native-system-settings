@@ -85,20 +85,20 @@ Sample result from Galaxy S3 (Genymotion);
 - keyboardHidden: enum('undefined', 'no', 'yes')
 - keyboard: enum('undefined', 'nokeys', 'qwerty', '12key')
 - orientation: enum('undefined', 'portrait', 'landscape', 'square')
-- screenLayout: enum('small', 'normal', 'large', 'xlarge', 'undefined')
-	*small:* The screen is at least approximately 320x426 dp units.
-	*normal:* The screen is at least approximately 320x470 dp units.
-	*large:* The screen is at least approximately 480x640 dp units.
-	*xlarge:* The screen is at least approximately 720x960 dp units.
+- screenLayout: enum('small', 'normal', 'large', 'xlarge', 'undefined') <br>
+	*small:* The screen is at least approximately 320x426 dp units.<br>
+	*normal:* The screen is at least approximately 320x470 dp units.<br>
+	*large:* The screen is at least approximately 480x640 dp units.<br>
+	*xlarge:* The screen is at least approximately 720x960 dp units.<br>
 	*undefined:* A screen layout size value indicating that no size has been set.
 - screenHeightDp: number
 - screenWidthDp: number
 - smallestScreenWidthDp: number
 - uiModeType: enum('undefined', 'normal', 'desk', 'car', 'television', 'appliance', 'watch')
-- locale: object
-	locale.country: enum('US', 'GB', 'DE', 'FR', ...)
-	locale.displayCountry: enum('United States', 'United Kingdom', ...)
-	locale.displayLanguage: enum('English', 'Deutsch', ...)
-	locale.displayName: enum('English (United States)', 'Deutsch (Deutschland)', ...)
-	locale.language: enum('en', 'de', 'fr', 'tr', ...)
-	locale.localization: enum('en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ...)
+- locale: object<br>
+	locale.country: enum('US', 'GB', 'DE', 'FR', ...)<br>
+	locale.displayCountry: enum('United States', 'United Kingdom', ...)<br>
+	locale.displayLanguage: enum('English', 'Deutsch', ...)<br>
+	locale.displayName: enum('English (United States)', 'Deutsch (Deutschland)', ...)<br>
+	locale.language: enum('en', 'de', 'fr', 'tr', ...)<br>
+	locale.localization: enum('en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ...)<br>

@@ -1,0 +1,41 @@
+{
+  "name": "react-native-system-settings",
+  "version": "0.0.1",
+  "description": "Provides accessing some Android system setting values like localization, language, country, oritentation, screen layout and ui mode type.",
+  "main": "index.js",
+  "keywords": [
+    "react-native",
+		"system",
+		"locale",
+		"localization",
+		"dimension",
+		"screenWidthDp",
+		"smallestScreenWidthDp",
+		"screenHeightDp",
+		"keyboard"
+  ],
+  "author": {
+    "name": "efkan"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/efkan/react-native-system-settings.git"
+  },
+  "readmeFilename": "README.md",
+  "gitHead": "45cd90b7f664c1565b3a21b729b7d1613de0ad5a",
+  "bugs": {
+    "url": "https://github.com/efkan/react-native-system-settings/issues"
+  },
+  "homepage": "https://github.com/efkan/react-native-system-settings#readme",
+  "_id": "react-native-system-settings@0.0.1",
+  "scripts": {},
+  "_from": "react-native-system-settings@*",
+	"dependencies": {},
+  "devDependencies": {
+		"babel-eslint": "^6.0.2",
+    "eslint": "^2.8.0",
+    "eslint-plugin-react": "^5.0.1",
+    "eslint-plugin-react-native": "^1.0.0"
+  }
+}

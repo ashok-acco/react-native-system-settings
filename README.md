@@ -3,7 +3,7 @@
 This module has been prepared by according to Android Configuration class;  https://developer.android.com/reference/android/content/res/Configuration.html
 
 ### Note:
-	- The module doesn't include the all configuration values. However some additional setting values exist like UI Mode Type.
+  - The module doesn't include the all configuration values. However some additional setting values exist like UI Mode Type.
   - The module **doesn't handle the changes** of the phone states in real-time (for instance orientation changes)
   - ***Helping*** to improve that module would be welcomed.
 		A feature that provides ***setting*** the system settings would be great.
@@ -13,15 +13,15 @@ This module has been prepared by according to Android Configuration class;  http
 
 In your settings.gradle add the lines below:
 
-	```
+
 	include ':systemsettings'
 	project(':systemsettings').projectDir = new File(rootProject.projectDir, '../native_modules/systemsettings/android')
-	```
+
 
 
 The package needs to be provided in the getPackages method of the MainActivity.java file. This file exists under the android folder in your react-native application directory. The path to this file is: android/app/src/main/java/com/your-app-name/MainActivity.java.
 
-	```
+
 	import com.systemsettings.SystemSettingsPackage;  // <-- Add this line
 
 	protected List<ReactPackage> getPackages() {
@@ -30,19 +30,19 @@ The package needs to be provided in the getPackages method of the MainActivity.j
 	            new SystemSettingsModule()  // <-- Also add this line
 			);
 	}
-	```
+
 
 
 In your android/app/build.gradle add the following line:
 
-	```
+
 	dependencies {
 	    compile fileTree(dir: "libs", include: ["*.jar"])
 	    compile "com.android.support:appcompat-v7:23.0.1"
 	    compile "com.facebook.react:react-native:+"
 			compile project(':systemsettings')  // <-- Add this line
 	}
-	```
+
 
 
 ## usage
@@ -53,7 +53,7 @@ or
 
 
 Sample result from Galaxy S3 (Genymotion);
-```
+
 	{
 		densityDpi: 320,
 		fontScale: 1,
@@ -75,7 +75,7 @@ Sample result from Galaxy S3 (Genymotion);
 		smallestScreenWidthDp: 360,
 		uiModeType: "normal"
 	}
-```
+
 
 ### The values that can be existed in result object;
 

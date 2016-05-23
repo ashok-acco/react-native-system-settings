@@ -54,9 +54,9 @@ Or you can do it manually as follows:
 
 ## usage
 
-Define a new module variable by;<br>
+Define a new module variable by using ES6 syntax;<br>
 `import SystemSettings from 'react-native-system-settings';`<br>
-or<br>
+or by using `require` method;<br>
 `var SystemSettings = require('react-native-system-settings');`<br>
 then system settings can gotten in somewhere in code<br>
 ```

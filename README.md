@@ -25,8 +25,18 @@ Or you can do it manually as follows:
 	project(':systemsettings').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-system-settings/android')
 	```
 
+2. In your android/app/build.gradle add the following line:
 
-2. The package needs to be provided in the getPackages method of the MainActivity.java file. This file exists under the android folder in your react-native application directory. The path to this file is: android/app/src/main/java/com/your-app-name/MainActivity.java.
+	```
+	dependencies {
+	    compile fileTree(dir: "libs", include: ["*.jar"])
+	    compile "com.android.support:appcompat-v7:23.0.1"
+	    compile "com.facebook.react:react-native:+"
+			compile project(':systemsettings')  // <-- Add this line
+	}
+	```
+
+3. The package needs to be provided in the getPackages method of the MainActivity.java file. This file exists under the android folder in your react-native application directory. The path to this file is: android/app/src/main/java/com/your-app-name/MainActivity.java.
 
 	```
 	import com.systemsettings.SystemSettingsPackage;  // <-- Add this line
@@ -40,16 +50,8 @@ Or you can do it manually as follows:
 	```
 
 
-3. In your android/app/build.gradle add the following line:
+And finally run the command of `react-native run-android`
 
-	```
-	dependencies {
-	    compile fileTree(dir: "libs", include: ["*.jar"])
-	    compile "com.android.support:appcompat-v7:23.0.1"
-	    compile "com.facebook.react:react-native:+"
-			compile project(':systemsettings')  // <-- Add this line
-	}
-	```
 
 
 ## usage
@@ -74,13 +76,13 @@ Sample result from Galaxy S3 (Genymotion);
 		hardKeyboardHidden: "no",
 		keyboard: "qwerty",
 		keyboardHidden: "no",
-		locale: {
+		localization: {
 			country: "US",
 			displayCountry: "United States",
 			displayLanguage: "English",
 			displayName: "English (United States)",
 			language: "en",
-			localization: "en_US"
+			locale: "en_US"
 		},
 		orientation: "portrait",
 		screenHeightDp: 615,
@@ -109,13 +111,13 @@ Sample result from Galaxy S3 (Genymotion);
 - screenWidthDp: Number
 - smallestScreenWidthDp: Number
 - uiModeType: One of 'undefined', 'normal', 'desk', 'car', 'television', 'appliance' or 'watch' strings
-- locale: object<br>
-	*locale.country:* One of 'US', 'GB', 'DE', 'FR', ... strings <br>
-	*locale.displayCountry:* One of 'United States', 'United Kingdom', ... strings <br>
-	*locale.displayLanguage:* One of 'English', 'Deutsch', ... strings <br>
-	*locale.displayName:*	 One of 'English (United States)', 'Deutsch (Deutschland)', ... strings <br>
-	*locale.language:*	 One of 'en', 'de', 'fr', 'tr', ... strings <br>
-	*locale.localization:*	 One of 'en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ... strings <br>
+- localization: object<br>
+	*localization.country:* One of 'US', 'GB', 'DE', 'FR', ... strings <br>
+	*localization.displayCountry:* One of 'United States', 'United Kingdom', ... strings <br>
+	*localization.displayLanguage:* One of 'English', 'Deutsch', ... strings <br>
+	*localization.displayName:*	 One of 'English (United States)', 'Deutsch (Deutschland)', ... strings <br>
+	*localization.language:*	 One of 'en', 'de', 'fr', 'tr', ... strings <br>
+	*localization.locale:*	 One of 'en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ... strings <br>
 
 # License
 

@@ -11,21 +11,26 @@ This module has been prepared by according to Android Configuration class;  http
 
 ## installation
 
+### With [rnpm](https://github.com/rnpm/rnpm) using;
+
 1. Run the command of `npm i --save react-native-system-settings` in the console.
-2. After installing the npm package you need to link the native modules. You can do so using [rnpm](https://github.com/rnpm/rnpm).
+2. Link the native module by using the command below:
 
 `$ rnpm link react-native-system-settings`
 
-Or you can do it manually as follows:
+3. And finally run the command of `react-native run-android`
 
-1. In your settings.gradle add the lines below:
+### Manually;
+
+1. Run the command of `npm i --save react-native-system-settings` in the console.
+2. In your settings.gradle add the lines below:
 
 	```
 	include ':systemsettings'
 	project(':systemsettings').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-system-settings/android')
 	```
 
-2. In your android/app/build.gradle add the following line:
+3. In your android/app/build.gradle add the following line:
 
 	```
 	dependencies {
@@ -36,7 +41,7 @@ Or you can do it manually as follows:
 	}
 	```
 
-3. The package needs to be provided in the getPackages method of the MainActivity.java file. This file exists under the android folder in your react-native application directory. The path to this file is: android/app/src/main/java/com/your-app-name/MainActivity.java.
+4. The package needs to be provided in the getPackages method of the MainActivity.java file. This file exists under the android folder in your react-native application directory. The path to this file is: android/app/src/main/java/com/your-app-name/MainActivity.java.
 
 	```
 	import com.systemsettings.SystemSettingsPackage;  // <-- Add this line
@@ -48,9 +53,9 @@ Or you can do it manually as follows:
 			);
 	}
 	```
+5. And finally run the command of `react-native run-android`
 
 
-And finally run the command of `react-native run-android`
 
 
 

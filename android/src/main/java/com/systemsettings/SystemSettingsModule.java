@@ -39,18 +39,18 @@ public class SystemSettingsModule extends ReactContextBaseJavaModule {
   public void get(Callback callback) {
 		Configuration conf = getReactApplicationContext().getResources().getConfiguration();
 
-		Locale locale = conf.locale;
+		Locale localization = conf.locale;
 
-		WritableMap localeMap = new WritableNativeMap();
-		localeMap.putString("language", locale.getLanguage());
-		localeMap.putString("country", locale.getCountry());
-		localeMap.putString("localization", locale.toString());
-		localeMap.putString("displayCountry", locale.getDisplayCountry());
-		localeMap.putString("displayName", locale.getDisplayName());
-		localeMap.putString("displayLanguage", locale.getDisplayLanguage());
+		WritableMap localizationMap = new WritableNativeMap();
+		localizationMap.putString("language", localization.getLanguage());
+		localizationMap.putString("country", localization.getCountry());
+		localizationMap.putString("locale", localization.toString());
+		localizationMap.putString("displayCountry", localization.getDisplayCountry());
+		localizationMap.putString("displayName", localization.getDisplayName());
+		localizationMap.putString("displayLanguage", localization.getDisplayLanguage());
 
 		WritableMap result = new WritableNativeMap();
-		result.putMap("locale", localeMap);
+		result.putMap("localization", localizationMap);
 		result.putInt("densityDpi", conf.densityDpi);
 		result.putDouble("fontScale", conf.fontScale);
 

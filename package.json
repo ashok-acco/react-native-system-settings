@@ -1,6 +1,6 @@
 {
   "name": "react-native-system-settings",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides accessing some Android system setting values like localization, language, country, oritentation, screen layout and ui mode type.",
   "main": "index.js",
   "keywords": [

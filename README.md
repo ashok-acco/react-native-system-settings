@@ -71,7 +71,7 @@ SystemSettings.get(
 	settings => console.log('settings: ', settings)
 )
 ```
-Also Promise-then can be used:
+Also ***promise-then*** can be used:
 ```
 SystemSettings.get().then(settings => console.log('settings: ', settings)).done()
 ```
@@ -85,7 +85,7 @@ class App extends React.Component {
 	_loadInitialState = async () => {
 		try {
 			let settings = await SystemSettings.get()
-			// Now settings can be used!
+			// Now settings variable is fill and can be used!
 		} catch () {}
 	};
 }

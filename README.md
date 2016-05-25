@@ -86,7 +86,7 @@ class App extends React.Component {
 		try {
 			let settings = await SystemSettings.get()
 			// Now settings variable is filled and can be used!
-		} catch () {}
+		} catch (error) {}
 	};
 }
 ```

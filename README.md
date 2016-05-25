@@ -65,12 +65,32 @@ Define a new module variable by using ES6 syntax;<br>
 `import SystemSettings from 'react-native-system-settings';`<br>
 or by using `require` method;<br>
 `var SystemSettings = require('react-native-system-settings');`<br>
-then system settings can gotten in somewhere in code<br>
+then system settings can gotten in somewhere in code:<br>
 ```
 SystemSettings.get(
 	settings => console.log('settings: ', settings)
 )
 ```
+Also Promise-then can be used:
+```
+SystemSettings.get().then(settings => console.log('settings: ', settings)).done()
+```
+Also ***ES7 `async-await`*** method can be used!
+```
+class App extends React.Component {
+	componentWillMount() {
+		this._loadInitialState()
+	}
+	
+	_loadInitialState = async () => {
+		try {
+			let settings = await SystemSettings.get()
+			// Now settings can be used!
+		} catch () {}
+	};
+}
+```
+
 
 Sample result from Galaxy S3 (Genymotion);
 

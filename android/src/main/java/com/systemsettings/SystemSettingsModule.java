@@ -18,6 +18,7 @@ import java.util.Map;
 import android.app.UiModeManager;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.text.format.DateFormat;
 import android.util.Log;
 
 public class SystemSettingsModule extends ReactContextBaseJavaModule {
@@ -48,6 +49,7 @@ public class SystemSettingsModule extends ReactContextBaseJavaModule {
 		localizationMap.putString("displayCountry", localization.getDisplayCountry());
 		localizationMap.putString("displayName", localization.getDisplayName());
 		localizationMap.putString("displayLanguage", localization.getDisplayLanguage());
+		localizationMap.putBoolean("is24HourFormat", DateFormat.is24HourFormat(getReactApplicationContext()));
 
 		WritableMap result = new WritableNativeMap();
 		result.putMap("localization", localizationMap);

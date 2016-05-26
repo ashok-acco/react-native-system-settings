@@ -3,7 +3,7 @@
 This module has been prepared by according to Android Configuration class;  https://developer.android.com/reference/android/content/res/Configuration.html
 
 ### Note:
-  - The module doesn't include the all configuration values. However some additional setting values exist like UI Mode Type.
+  - The module doesn't include the all configuration values. However some additional setting values exist like UI Mode Type and is24HourFormat.
   - The module **doesn't handle the changes** of the phone states in real-time (for instance orientation changes)
   - ***Helping*** to improve that module would be welcomed.
 		A feature that provides ***setting*** the system settings would be great.
@@ -106,6 +106,7 @@ Sample result from Galaxy S3 (Genymotion);
 			displayCountry: "United States",
 			displayLanguage: "English",
 			displayName: "English (United States)",
+			is24HourFormat: false,
 			language: "en",
 			locale: "en_US"
 		},
@@ -141,6 +142,7 @@ Sample result from Galaxy S3 (Genymotion);
 	*localization.displayCountry:* One of 'United States', 'United Kingdom', ... strings <br>
 	*localization.displayLanguage:* One of 'English', 'Deutsch', ... strings <br>
 	*localization.displayName:*	 One of 'English (United States)', 'Deutsch (Deutschland)', ... strings <br>
+	*localization.is24HourFormat:*	One of `true` and `false` values
 	*localization.language:*	 One of 'en', 'de', 'fr', 'tr', ... strings <br>
 	*localization.locale:*	 One of 'en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ... strings <br>
 

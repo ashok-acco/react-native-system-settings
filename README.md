@@ -7,7 +7,7 @@ This module has been prepared by according to Android Configuration class;  http
   - The module **doesn't handle the changes** of the phone states in real-time (for instance orientation changes)
   - ***Helping*** to improve that module would be welcomed.
 		A feature that provides ***setting*** the system settings would be great.
-		Another feature that provides getting the system settings from ***`iOS`*** would be great.
+		Another feature that provides getting the system settings from ***`iOS`*** would also be great.
 
 ## installation
 

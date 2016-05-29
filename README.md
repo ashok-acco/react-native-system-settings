@@ -5,7 +5,7 @@ This module has been prepared by according to Android Configuration class;  http
 ### Note:
   - The module doesn't include the all configuration values. However some additional setting values exist like UI Mode Type and is24HourFormat.
   - The module **doesn't handle the changes** of the phone states in real-time (for instance orientation changes)
-  - ***Helping*** to improve that module would be welcomed.
+  - ***Helping*** to improve that module is be welcomed.
 		A feature that provides ***setting*** the system settings would be great.
 		Another feature that provides getting the system settings from ***`iOS`*** would also be great.
 

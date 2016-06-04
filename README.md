@@ -85,7 +85,7 @@ class App extends React.Component {
 	_loadInitialState = async () => {
 		try {
 			let settings = await SystemSettings.get()
-			// Now settings variable is filled and can be used!
+			// Now settings variable would be filled and can be used!
 		} catch (error) {}
 	};
 }

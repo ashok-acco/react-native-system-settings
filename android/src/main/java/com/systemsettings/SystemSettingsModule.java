@@ -18,8 +18,10 @@ import java.util.Map;
 import android.app.UiModeManager;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.os.Build.VERSION;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.util.DisplayMetrics;
 
 public class SystemSettingsModule extends ReactContextBaseJavaModule {
 
@@ -53,7 +55,13 @@ public class SystemSettingsModule extends ReactContextBaseJavaModule {
 
 		WritableMap result = new WritableNativeMap();
 		result.putMap("localization", localizationMap);
-		result.putInt("densityDpi", conf.densityDpi);
+		if (VERSION.SDK_INT > 16) {
+			result.putInt("densityDpi", conf.densityDpi);
+		} else {
+			DisplayMetrics metrics = getReactApplicationContext().getResources().getDisplayMetrics();
+			int densityDpi = (int)(metrics.density * 160f);
+			result.putInt("densityDpi", densityDpi);
+		}
 		result.putDouble("fontScale", conf.fontScale);
 
 		String hardKeyboardHidden = null;

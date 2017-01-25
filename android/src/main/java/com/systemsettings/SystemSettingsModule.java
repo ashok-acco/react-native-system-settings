@@ -22,6 +22,7 @@ import android.os.Build.VERSION;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.util.DisplayMetrics;
+import android.telephony.TelephonyManager;
 
 public class SystemSettingsModule extends ReactContextBaseJavaModule {
 
@@ -52,7 +53,26 @@ public class SystemSettingsModule extends ReactContextBaseJavaModule {
 		localizationMap.putString("displayName", localization.getDisplayName());
 		localizationMap.putString("displayLanguage", localization.getDisplayLanguage());
 		localizationMap.putBoolean("is24HourFormat", DateFormat.is24HourFormat(getReactApplicationContext()));
+	  
+		/**
+		 * Get ISO 3166-1 alpha-2 country code for this device (or null if not available)
+		 * @param context Context reference to get the TelephonyManager instance from
+		 * @return country code or null
+		 */
+		final TelephonyManager tm = (TelephonyManager) getReactApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
+		String simCountry = tm.getSimCountryIso();
+		if (simCountry != null && simCountry.length() == 2) { // SIM country code is available
+			simCountry = simCountry.toUpperCase(Locale.US);
+		}
+		String networkCountry = tm.getNetworkCountryIso();
+		if (tm.getPhoneType() != TelephonyManager.PHONE_TYPE_CDMA) { // device is not 3G (would be unreliable)
+			if (networkCountry != null && networkCountry.length() == 2) { // network country code is available
+				networkCountry = networkCountry.toUpperCase(Locale.US);
+			}
+		}
 
+		localizationMap.putString("simCountry", simCountry);
+		localizationMap.putString("networkCountry", networkCountry);
 		WritableMap result = new WritableNativeMap();
 		result.putMap("localization", localizationMap);
 		if (VERSION.SDK_INT > 16) {

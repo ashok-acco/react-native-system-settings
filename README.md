@@ -108,7 +108,9 @@ Sample result from Galaxy S3 (Genymotion);
 			displayName: "English (United States)",
 			is24HourFormat: false,
 			language: "en",
-			locale: "en_US"
+			locale: "en_US",
+			networkCountry: "US",
+			simCountry: "US"
 		},
 		orientation: "portrait",
 		screenHeightDp: 615,
@@ -145,6 +147,9 @@ Sample result from Galaxy S3 (Genymotion);
 	*localization.is24HourFormat:*	One of `true` and `false` values
 	*localization.language:*	 One of 'en', 'de', 'fr', 'tr', ... strings <br>
 	*localization.locale:*	 One of 'en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ... strings <br>
+	*localization.networkCountry:*	 One of 'US', 'GB', 'DE', 'FR', ... strings <br>
+	*localization.simCountry:*	 One of 'US', 'GB', 'DE', 'FR', ... strings <br>
+
 
 # License
 

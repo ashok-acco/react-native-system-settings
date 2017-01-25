@@ -3,6 +3,7 @@
 This module has been prepared by according to Android Configuration class;  https://developer.android.com/reference/android/content/res/Configuration.html
 
 ### Note:
+  - **Getting the user country**: `country` value of `localization` object may be tricky in Android systems. To find the certain user country you might check `simCountry` and `networkCountry` values of `localization` object.
   - The module doesn't include the all configuration values. However some additional setting values exist like UI Mode Type and is24HourFormat.
   - The module **doesn't handle the changes** of the phone states in real-time (for instance orientation changes)
   - ***Contributions*** are welcomed.

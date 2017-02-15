@@ -1,7 +1,7 @@
 {
   "name": "react-native-system-settings",
-  "version": "1.0.3",
-  "description": "Provides accessing some Android system setting values like localization, language, country, simCountry, networkCountry, is24HourFormat, oritentation, screen layout and ui mode type.",
+  "version": "1.0.4",
+  "description": "Provides accessing some Android system setting values like localization, language, country, simCountry, networkCountry, timzeZone, is24HourFormat, oritentation, screen layout and ui mode type.",
   "main": "index.js",
   "keywords": [
   	"react-native",
@@ -15,7 +15,8 @@
 	"keyboard",
 	"user country",
 	"sim country",
-	"network country"
+	"network country",
+	"time zone"
   ],
   "author": {
     "name": "efkan"

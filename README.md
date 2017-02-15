@@ -111,7 +111,15 @@ Sample result from Galaxy S3 (Genymotion);
 			language: "en",
 			locale: "en_US",
 			networkCountry: "US",
-			simCountry: "US"
+			simCountry: "US",
+			timeZone: {
+				ID: "Europe/Amsterdam",
+				displayName: {
+					long: "Amsterdam Standard Time",
+					short: "GMT+01:00",
+				},
+				offset: 3600000
+			}
 		},
 		orientation: "portrait",
 		screenHeightDp: 615,
@@ -150,6 +158,12 @@ Sample result from Galaxy S3 (Genymotion);
 	*localization.locale:*	 One of 'en_US', 'de_DE', 'de_AT', 'fr_FR', 'tr_TR', ... strings <br>
 	*localization.networkCountry:*	 One of 'US', 'GB', 'DE', 'FR', ... strings <br>
 	*localization.simCountry:*	 One of 'US', 'GB', 'DE', 'FR', ... strings <br>
+	*localization.timeZone:* object<br>
+		*localization.timezone.ID:* String<br>
+		*localization.timezone.displayName:* object<br>
+			*localization.timezone.displayname.short:* String<br>
+			*localization.timezone.displayName.long:* String<br>
+		*localization.timezone.offset:* Number of offset in milliseconds<br>
 
 
 # License

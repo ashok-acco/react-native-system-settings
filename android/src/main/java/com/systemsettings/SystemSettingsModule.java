@@ -11,9 +11,11 @@ import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.bridge.WritableNativeArray;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.TimeZone;
 
 import android.app.UiModeManager;
 import android.content.Context;
@@ -43,9 +45,20 @@ public class SystemSettingsModule extends ReactContextBaseJavaModule {
   public void get(Callback callback) {
 		Configuration conf = getReactApplicationContext().getResources().getConfiguration();
 
-		Locale localization = conf.locale;
+		TimeZone tz = TimeZone.getDefault();
+
+		WritableMap timeZoneDisplayNameMap = new WritableNativeMap();
+		timeZoneDisplayNameMap.putString("long", tz.getDisplayName());
+		timeZoneDisplayNameMap.putString("short", tz.getDisplayName(tz.inDaylightTime(new Date()), TimeZone.SHORT));
+
+		WritableMap timeZoneMap = new WritableNativeMap();
+		timeZoneMap.putMap("displayName", timeZoneDisplayNameMap);
+		timeZoneMap.putString("ID", tz.getID());
+		timeZoneMap.putInt("offset", tz.getOffset(new Date().getTime()));
 
 		WritableMap localizationMap = new WritableNativeMap();
+		Locale localization = conf.locale;
+		localizationMap.putMap("timeZone", timeZoneMap);
 		localizationMap.putString("language", localization.getLanguage());
 		localizationMap.putString("country", localization.getCountry());
 		localizationMap.putString("locale", localization.toString());
@@ -53,7 +66,8 @@ public class SystemSettingsModule extends ReactContextBaseJavaModule {
 		localizationMap.putString("displayName", localization.getDisplayName());
 		localizationMap.putString("displayLanguage", localization.getDisplayLanguage());
 		localizationMap.putBoolean("is24HourFormat", DateFormat.is24HourFormat(getReactApplicationContext()));
-	  
+
+
 		/**
 		 * Get ISO 3166-1 alpha-2 country code for this device (or null if not available)
 		 * @param context Context reference to get the TelephonyManager instance from

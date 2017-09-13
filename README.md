@@ -93,42 +93,42 @@ class App extends React.Component {
 ```
 
 
-Sample result from Galaxy S3 (Genymotion);
+Sample results from Galaxy S3 (Genymotion);
 
-	```
-	{
-		densityDpi: 320,
-		fontScale: 1,
-		hardKeyboardHidden: "no",
-		keyboard: "qwerty",
-		keyboardHidden: "no",
-		localization: {
-			country: "US",
-			displayCountry: "United States",
-			displayLanguage: "English",
-			displayName: "English (United States)",
-			is24HourFormat: false,
-			language: "en",
-			locale: "en_US",
-			networkCountry: "US",
-			simCountry: "US",
-			timeZone: {
-				ID: "Europe/Amsterdam",
-				displayName: {
-					long: "Amsterdam Standard Time",
-					short: "GMT+01:00",
-				},
-				offset: 3600000
-			}
-		},
-		orientation: "portrait",
-		screenHeightDp: 615,
-		screenLayout: "normal",
-		screenWidthDp: 360,
-		smallestScreenWidthDp: 360,
-		uiModeType: "normal"
-	}
-	```
+```
+{
+	densityDpi: 320,
+	fontScale: 1,
+	hardKeyboardHidden: "no",
+	keyboard: "qwerty",
+	keyboardHidden: "no",
+	localization: {
+		country: "US",
+		displayCountry: "United States",
+		displayLanguage: "English",
+		displayName: "English (United States)",
+		is24HourFormat: false,
+		language: "en",
+		locale: "en_US",
+		networkCountry: "US",
+		simCountry: "US",
+		timeZone: {
+			ID: "Europe/Amsterdam",
+			displayName: {
+				long: "Amsterdam Standard Time",
+				short: "GMT+01:00",
+			},
+			offset: 3600000
+		}
+	},
+	orientation: "portrait",
+	screenHeightDp: 615,
+	screenLayout: "normal",
+	screenWidthDp: 360,
+	smallestScreenWidthDp: 360,
+	uiModeType: "normal"
+}
+```
 
 ### The values that can be existed in result object;
 

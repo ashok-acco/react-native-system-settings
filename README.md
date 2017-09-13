@@ -93,7 +93,7 @@ class App extends React.Component {
 ```
 
 
-Sample results from Galaxy S3 (Genymotion);
+A sample result from Galaxy S3 (Genymotion);
 
 ```
 {
